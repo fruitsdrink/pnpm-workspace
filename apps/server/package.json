@@ -1,0 +1,14 @@
+{
+  "name": "@pw/server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "server app",
+  "author": "haight",
+  "license": "MIT",
+  "scripts": {
+    "debug": "ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "@webrtc-react-01/utils": "workspace:^"
+  }
+}

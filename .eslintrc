@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  // ypescript-eslint/eslint-recommended 禁用了一些可能与 typescript 冲突的规则
+  // prettier (即eslint-config-prettier) 需要放在最后，以确保其他规则的优先级更高，关闭所有可能与 prettier 冲突的规则
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier"
+  ],
+  // prettier 插件（即eslint-plugin-prettier），将 prettier 规则转化为 ESLint 规则运行，确保代码格式的一致性
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    // 打开 prettier插件提供的规则，该插件从 ESLint 内运行 prettier
+    "prettier/prettier": "error",
+    // 关闭一些可能与 prettier 冲突的规则，下面两个规则和 prettier 有冲突
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "composite": true, // 是否启用项目编译
+    "incremental": true, // 是否启用增量编译
+
+    // 上面两个配置与typescript的project references, tsc 的 --build模式有关
+    // 具体可参阅typescript文档
+    // https://www.typescriptlang.org/docs/handbook/project-references.html
+    // https://www.typescriptlang.org/tsconfig#incremental
+    // https://www.typescriptlang.org/tsconfig#composite
+
+    "declaration": true, // 是否生成声明文件
+    "declarationMap": true, // 是否生成声明文件的map文件
+    "emitDeclarationOnly": true, // 是否只生成声明文件
+    "noEmitOnError": true, // 是否在编译错误时不生成文件
+    "skipLibCheck": true, // 是否跳过lib检查
+
+    // 上面几个配置与生成js文件、d.ts文件，sourcemap文件有关
+    // 具体可参阅typescript文档
+    // https://www.typescriptlang.org/tsconfig#declaration
+    // https://www.typescriptlang.org/tsconfig#declarationMap
+    // https://www.typescriptlang.org/tsconfig#emitDeclarationOnly
+    // https://www.typescriptlang.org/tsconfig#noEmitOnError
+
+    "esModuleInterop": true, // 是否启用es模块的interop
+    "allowSyntheticDefaultImports": true, // 是否允许合成默认导入
+
+    // 上面两个配置与CommonJS和ESModule直接的互操作有关
+    // 具体可参阅typescript文档
+    // https://www.typescriptlang.org/tsconfig#esModuleInterop
+
+    "resolveJsonModule": true, // 是否解析json模块
+    "strict": true // 是否启用严格模式
+  }
+}
